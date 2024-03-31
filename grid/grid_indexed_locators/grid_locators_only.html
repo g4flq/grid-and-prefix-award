@@ -1,0 +1,4970 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Sort Demo</title>
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel="stylesheet" type="text/css" href="css/qsort.css">
+<script language="JavaScript" src="js/qsort.js" type="text/javascript" defer></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+function initpage() {
+initqsort("demo","coltxton","coltxtoff",false,true);
+demo.qs.descimage="images/upsimple.png";
+demo.qs.ascimage="images/downsimple.png";
+demo.qs.initdirection("ASCEND,ASCEND,ASCEND,ASCEND,ASCEND,ASCEND");
+}
+//-->
+</script>
+<style type="text/css">
+.style1 {
+	border-collapse: collapse;
+}
+.auto-style1 {
+	white-space: normal;
+	height: 22px;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 4px;
+	background-color: #EFEFEF;
+}
+.auto-style2 {
+	background-position: 4px center;
+	background-repeat: no-repeat;
+	white-space: nowrap;
+	height: 24px;
+	background-color: #ffcc33;
+	color: black;
+	font-family: Arial,Verdana,sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	padding-right: 4px;
+	padding-left: 17px;
+	cursor: pointer;
+}
+.auto-style3 {
+	white-space: normal;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 4px;
+	background-color: #EFEFEF;
+}
+</style>
+</head>
+<body onload="initpage();">
+
+<br>
+
+
+
+<body onload="initpage();">
+
+<center>
+<table style="width: 400px" class="style1">
+<tr>
+<td><CENTER style="width: 424px"><b><font size="4">Wintonian Student List<br>
+</font></b><font size="2"><i>(rev: 5/24/23)<br>
+</i><b>To index on any column, click column header.<br></b>To return to original 
+indexed state click the column Prefix until the empty cell appears.</font></center></td>
+</tr>
+</table>
+</center>
+<center>
+<table  border="1" cellpadding="4" class="style1" >
+<tr>
+<td><a href="../gridlocators.html" target="main" class="link" onmouseover="mOver()" onmouseout="mOut()" title="">Grid Locator TablesHome</a></td>
+</tr>
+</table>
+</center>
+<br>
+<center>
+<table style="width: 800">
+<tr>
+<td>
+<center>
+ <table id="demo" cellspacing="1" cellpadding="4" align="center" style="width: 800">
+ <tr>
+ <td class="colhdr" style="width: 200; height: 24">DXCC Entity </td>
+ <td class="colhdr" style="width: 30; height: 24">Prefix</td>
+ <td class="colhdr" style="width: 10; height: 24">QSO&#39;s</td>
+ <td class="colhdr" style="width: 500; height: 24">Grid Square</td>
+ <td class="auto-style2">Cont</td>
+ </tr>
+ <tr>
+<td class="auto-style1" style="height: 22">Spratly Islands</td>
+<td class="auto-style1">&nbsp;</td>
+<td class="auto-style1">1</td>
+<td class="auto-style3"><strong>OJ</strong>58, 67-68, 74, 79,<strong>OK</strong>70-71&nbsp;&nbsp;click for  <a href="images/Spratley_Is.pdf">Islands</a> </td>
+<td class="auto-style1">AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22" >Sov. Mil. Order of Malta</td>
+  <td class="auto-style1" style="height: 22" >1A0</td>
+  <td class="auto-style1" >1</td>
+  <td class="auto-style3" ><b>JN</b>61</td>
+  <td class="auto-style1" >EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22" >Monaco</td>
+  <td class="auto-style1" >3A</td>
+  <td class="auto-style1" >1</td>
+  <td class="auto-style3" ><b>JN</b>33</td>
+  <td class="auto-style1" >EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22" >Agalega &amp; St.Brandon</td>
+  <td class="auto-style1" >3B6,7</td>
+  <td class="auto-style1" >1</td>
+  <td class="auto-style3" ><b>LH</b>89</td>
+  <td class="auto-style1" >AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Mauritius</td>
+  <td class="auto-style1">3B8</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style3"><b>LG</b>89</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Rodriguez Is.</td>
+  <td class="auto-style1">3B9</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style3"><b>MH</b>10</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Equatorial Guinea</td>
+  <td class="auto-style1">3C</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style3"><b>JJ</b>41, 51</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Annobon Is.</td>
+  <td class="auto-style1">3C0</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style3"><b>JI</b>28</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Fiji</td>
+  <td class="auto-style1">3D2/f</td>
+  <td class="auto-style1">3</td>
+  <td class="auto-style3"><b>RH</b>81-83, 90-93,<b> AH</b>01-03</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Conway Reef</td>
+  <td class="auto-style1">3D2/c</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style3"><b>RG</b>78</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Rotuma Is.</td>
+  <td class="auto-style1">3D2/r</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style3"><b>RH</b>87</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Swaziland</td>
+  <td class="auto-style1">3DA</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style3"><b>KG</b>52-54, 62-63</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">eSwatini&nbsp; after 18Apr2018</td>
+  <td class="auto-style1">3DA</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style3"><b>KG</b>52-54, 62-63</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Tunisia</td>
+  <td class="auto-style1">3V</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style3"><b>JM</b>33-34, 40-47, 50-57</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Vietnam</td>
+  <td class="auto-style1">3W, XV</td>
+  <td class="auto-style1">4</td>
+  <td class="auto-style3"><b>OJ</b>28-29, 39, <b>OK</b>20-21, 27-38, 40-46,<b>OL</b>00-01, 10-12, 20</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Guinea</td>
+  <td class="auto-style1">3X</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style3"><b>IJ</b>39, 48-49, 57-59,<b>IK</b>20-21, 30-32, 40-42, 50-52</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Bouvet</td>
+  <td class="auto-style1">3Y</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style3"><b>JD</b>15</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Peter 1 Is.</td>
+  <td class="auto-style1">3Y</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style3"><b>EC</b>41</td>
+  <td class="auto-style1">AN</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Azerbaijan</td>
+  <td class="auto-style1">4J,4K</td>
+  <td class="auto-style1">3</td>
+  <td class="auto-style3"><strong>LM</strong>28-29, 38-39, 48-49,<strong>LN</strong>20-21, 30-31. 40-41, 50</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Georgia</td>
+  <td class="auto-style1">4L</td>
+  <td class="auto-style1">3</td>
+  <td class="auto-style3"><strong>LN</strong>01-03, 11-13, 21-22, 31-32</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Montenegro after 28Jun2006</td>
+  <td class="auto-style1">4O </td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style3"><strong>JN</strong>91-93,<strong>KN</strong>02-03</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Sri Lanka</td>
+  <td class="auto-style1">4P-4S</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>MJ</strong>96-99,<strong>NJ</strong>06-09</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">ITU HQ (Geneva)</td>
+  <td class="auto-style1">4U_ITU&nbsp; </td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>JN</strong>36</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">United Nations HQ (New York)</td>
+  <td class="auto-style1">4U_UN&nbsp;&nbsp; <br></td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FN</strong> 20</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Timor-Leste</td>
+  <td class="auto-style1">4W</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>PI</strong>20-21, 30-31</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Israel</td>
+  <td class="auto-style1">4X, 4Z</td>  
+  <td class="auto-style1">3</td>
+  <td class="auto-style1"><strong>KL</strong>79,<strong>KM</strong>70-73</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Libya</td>
+  <td class="auto-style1">5A</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>JL</strong>45-49, 53-59, 63-69,  72-79, 83-89, 91-99,<strong>JM</strong>40, 50-52, 60-62, 70-72, 80-81, 90, <strong>KL</strong>00-09, 10-19, 20-29,<strong>KM</strong>00-02, 10-12, 20-21</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Cyprus</td>
+  <td class="auto-style1">5B</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>KM</strong>64-65, 74-75</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Tanzania</td>
+  <td class="auto-style1">5H-5I</td>
+  <td class="auto-style1">3</td>
+  <td class="auto-style1"><strong>KH</strong>78-89, 98-99,<strong>KI</strong>43-45, 51-58, 60-67, 70-78, 80-87, 90-95</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Nigeria</td>
+  <td class="auto-style1">5N-5O</td>
+  <td class="auto-style1">3</td>
+  <td class="auto-style1"><strong>JJ</strong>16-19, 24-29, 34-39, 44-49, 56-59, 68-69,<strong>JK</strong>10-11, 20-23, 30-33, 40-43, 50-53, 60-63, 71-72</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Madagascar</td>
+  <td class="auto-style1">5R-5S</td>
+  <td class="auto-style1">2</td>  
+  <td class="auto-style1"><strong>LG</strong>15-19, 24-29, 34-39, 47-49,<strong>LH</strong> 12, 20-24, 30-36, 40-48, 53-56</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 22">Mauritania</td>
+  <td class="auto-style1">5T</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>IK</strong>16-19, 26-29, 34-39, 45-49, 55-59, 65-69, 75-79, <strong>IL</strong>10-13, 20-23, 30-33, 40-45, 50-56, 60-66, 75</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Niger</td>
+  <td class="auto-style1">5U</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>JK</strong>02-05, 12-15, 19, 23-29, 33-39, 42-49, 53-59, 63-69, 75-79,<strong>JL</strong>30, 40-42, 50-53, 60-63, 70-73</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Togo</td>
+  <td class="auto-style1">5V</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>JJ</strong>06-09, <strong>JK</strong>00</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Samoa</td>
+  <td class="auto-style1">5W</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>AH</strong>35-36, 45-46</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Uganda</td>
+  <td class="auto-style1">5X</td>  
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>KI</strong>48-49, 58-59, <strong>KJ</strong>40, 50-53, 60-63, 70-74</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+  <tr>
+  <td class="auto-style1">Kenya</td>
+  <td class="auto-style1">5Y-5Z</td>
+  <td class="auto-style1">3</td>
+  <td class="auto-style1"><strong>KI</strong>78-79, 87-89, 95-99, <strong>KJ</strong>70-74, 80-84, 90-93,<strong>LI</strong>07-09,<strong> LJ</strong>00-03</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Senegal</td>
+  <td class="auto-style1">6V-6W</td>
+  <td class="auto-style1">3</td>
+  <td class="auto-style1"><strong>IK</strong>12-16, 22-26, 32-36, 42-43</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Jamaica</td>
+  <td class="auto-style1">6Y</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>FK</strong>08, 17-18</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Yemen</td>
+  <td class="auto-style1">7O</td>
+  <td class="auto-style1">1</td>  <td class="auto-style1"><strong>LK</strong>12-17, 23-27, 35-36</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Lesotho</td>
+  <td class="auto-style1">7P</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>KF</strong>39, 49, <strong>KG</strong>30-31, 40-41</td>  
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Malawi</td>
+  <td class="auto-style1">7Q</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>KH</strong>65-69, 72-79, <strong>KI</strong>60, 70</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Algeria</td>
+  <td class="auto-style1">7T-7Y</td>
+  <td class="auto-style1">3</td>  
+  <td class="auto-style1"><strong>IL</strong>56-59, 65-69, 74-79, 83-89, 92-99, <strong>IM</strong>70, 80-81, 90-95,<strong>JK</strong>19, 29, 39,<strong>JL</strong>00-39, 41-49, 52-54, <strong>JM</strong>00-06, 10-16, 20-26, 30-36, 40-42</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Barbados</td>
+  <td class="auto-style1">8P</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>GK</strong>03</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Maldives</td>
+  <td class="auto-style1">8Q</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>MI</strong>69, <strong>MJ</strong>60-66</td>
+  <td class="auto-style1">AS/AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Guyana</td>
+  <td class="auto-style1"
+>8R</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>FJ</strong>
+94, 95-97, 98, 
+<strong>GJ</strong>
+
+01-08, 11-16
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Croatia</td>
+  <td class="auto-style1"
+>9A</td>
+  <td class="auto-style1"
+>6</td>
+  <td class="auto-style1"><strong>JN</strong>
+	64-65,
+73-76, 82-86, 94-95
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Ghana</td>
+  <td class="auto-style1"
+>9G</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>IJ</strong>
+84-89, 94-99, 
+<strong>IK</strong>
+
+80, 90, 
+<strong>JJ</strong>
+05-09, <strong>JK</strong>
+
+00
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Malta</td>
+  <td class="auto-style1"
+>9H</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>JM</strong>
+75-76
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Zambia</td>
+  <td class="auto-style1"
+>9I-9J</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>KH</strong>
+12-16, 22-28, 32-38,
+  43-49, 55-59, 65-69, 
+<strong>KI</strong>
+
+40-41,
+  50-51, 60
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Kuwait</td>
+  <td class="auto-style1"
+>9K</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>LL</strong>
+38-39, 
+<strong>LL</strong>
+
+48-49, 
+<strong>LM</strong>
+30
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Sierra Leone</td>
+  <td class="auto-style1"
+>9L</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>IJ</strong>
+37-39, 47-49
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>West Malaysia</td>
+  <td class="auto-style1"
+>9M2,4</td>
+  <td class="auto-style1"
+>4</td>
+  <td class="auto-style1"><strong>OJ</strong>
+02-06, 11-15, 21
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>East Malaysia</td>
+  <td class="auto-style1"
+>9M6,8</td>
+  <td class="auto-style1"
+>4</td>
+  <td class="auto-style1"><strong>OJ</strong>
+41, 50-52, 61-64, 71-75,
+  84-86, 94-95
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Nepal</td>
+  <td class="auto-style1"
+>9N</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>NL</strong>
+08-09, 17-19, 26-28,
+  30-37, 
+<strong>NM</strong>
+
+00,10
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1">Zaire&nbsp; or the Congo</td>
+  <td class="auto-style1">9Q-9T</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>JI</strong>
+64-65,
+  74-75, 82-89, 92-99, 
+<strong>JJ</strong>
+
+90-94,
+  
+<strong>KH</strong>
+
+18-19, 28-29, 38-39,
+  46-49,<strong> 
+KI </strong>00-49, 51-52, 
+<strong>KJ</strong>
+
+00-04, 10-14, 20-25, 30-35, 40-44,
+  50-53
+</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Burundi</td>
+  <td class="auto-style1"
+>9U</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>KI</strong>
+45-49, 55-57
+</td>
+  <td class="auto-style1"
+>9U</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Singapore</td>
+  <td class="auto-style1"
+>9V</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>OJ</strong>
+11
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Rwanda</td>
+  <td class="auto-style1"
+>9X</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>KI</strong>
+47-48, 57-58
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Trinidad &amp; Tobago</td>
+  <td class="auto-style1"
+>9Y,9Z</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>FK</strong>
+90-91
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Botswana</td>
+  <td class="auto-style1"
+>A2</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>KG</strong>
+03-09, 13-19, 4-29,
+  35-39, 47-48, 
+<strong>KH</strong>
+
+00-01,
+  10-11, 20-22, 30
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Tonga</td>
+  <td class="auto-style1"
+>A3</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>AG</strong>
+28-29, 
+<strong>AH</strong>
+
+20-21, 31
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Oman</td>
+  <td class="auto-style1"
+>A4</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>LK</strong>
+66-69, 77-79, 88-89, 
+<strong>LL</strong>
+
+70-74, 80-86, 90-93
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Bhutan</td>
+  <td class="auto-style1"
+>A5</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>NL</strong>
+46-48, 57-58
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>United Arab Emirates</td>
+  <td class="auto-style1"
+>A6</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>LL</strong>
+52-54, 62-64, 72-75,
+  84-85
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Qatar</td>
+  <td class="auto-style1"
+>A7</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>LL</strong>
+54-56
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Bahrain</td>
+  <td class="auto-style1"
+>A9</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>LL</strong>
+55-56
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Pakistan</td>
+  <td class="auto-style1"
+>AP-AS</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>ML</strong>
+05, 08-09, 15-19, 25-29,
+  33-39, 44-49, 54-59, 68-69, 
+<strong>MM</strong>
+30-31, 40-41, 50-56, 60-66, 70-76, 84-85
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Scarborough Reef</td>
+  <td class="auto-style1"
+>BS7</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>OK</strong>
+85 (China, Philippines, or Taiwan?)
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Taiwan</td>
+  <td class="auto-style1"
+>BV</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>PL</strong>
+01-06
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Pratas Is.</td>
+  <td class="auto-style1"
+>BV9P</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>OL</strong>
+80
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">China</td>
+  <td class="auto-style1">BY, BT</td>
+  <td class="auto-style1">10</td>
+  <td class="auto-style1"><strong>MM</strong>68-69, 76-79, 85-89,
+  91-99, 
+<strong>MN</strong>70, 80, 90-91,
+  
+<strong>NL</strong>19, 28-29, 38-39,
+  47-49, 58-59, 68-69, 79, 84-85, 88-89, 92-99, 
+<strong>NM</strong>00-99, 
+<strong>NN</strong>00-05,
+  10-16, 20-28, 30-47, 50-57, 60-64, 70-74, 80-82, 90-92, 
+<strong>OK</strong>48-49, 58-59, 
+<strong>OL</strong>01-09, 12-19, 22-29, 31-39, 41-49,
+  51-59, 61-69, 72-79, 83-89, 94-99 
+<strong>OM</strong>00-97, 99, 
+<strong>ON</strong>00-02, 10-12, 20-21, 30-32, 40-42, 50-54, 60-64, 70-75, 78,
+  80-99, 
+<strong>PM</strong>09, 19, 
+<strong>PN</strong>00-29, 31-39, 42-49, 52-57, 65-68,
+  77-78, 
+<strong>PO</strong>00-03, 10-13,
+  20-23, 30-32
+</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Nauru</td>
+  <td class="auto-style1"
+>C2</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>RI
+</strong>39
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Andorra</td>
+  <td class="auto-style1"
+>C3</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>JN
+</strong>02
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>The Gambia</td>
+  <td class="auto-style1"
+>C5</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>IK</strong>
+13, 23, 33
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Bahamas</td>
+  <td class="auto-style1"
+>C6</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>FL</strong>
+04-06, 13-16, 22-24
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Mozambique</td>
+  <td class="auto-style1"
+>C8-9</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>KG</strong>
+56-57, 64-69, 75-79, 
+<strong>KH</strong>
+
+54-55, 60-65, 70-78, 81-88, 90-98,
+  
+<strong>LH</strong>
+
+04-09
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Chile</td>
+  <td class="auto-style1"
+>CA-CE</td>
+  <td class="auto-style1"
+>8</td>
+  <td class="auto-style1"><strong>FD
+</strong>26-29, 35-39,
+  44-47,54-57, 64, 
+<strong>FE</strong>
+
+20-39,
+  43-49, 
+<strong>FF</strong>
+
+30-35, 40-49,
+  56, 
+<strong>FH</strong>40-41, 50-52,<strong> FG</strong>
+
+40-59, 65-67
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Easter Is.</td>
+  <td class="auto-style1">CE0/E</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>DG</strong>52</td>
+  <td class="auto-style1">SA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Juan Fernandez Isl.</td>
+  <td class="auto-style1">CE0/J</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>EF</strong>96, <strong>FF</strong>06</td>
+  <td class="auto-style1">SA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" style="height: 23px" >San Felix &amp; Ambrosio</td>
+  <td class="auto-style1" style="height: 23px">CE0/F.A</td>
+  <td class="auto-style1" style="height: 23px">1</td>
+  <td class="auto-style1" style="height: 23px"><strong>EG</strong>93,<strong>FG</strong>03&nbsp;&nbsp; 
+  (Felix EG93, Ambrosia FG03) </td>
+  <td class="auto-style1" style="height: 23px">SA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Antarctica</td>
+  <td class="auto-style1" style="height: 22">3Y, 8J1, AT0, CE9,DP0, ED, EM, FT8Y<br>
+	HF0, HL8, IA0, KC4<br>
+	LU, LZ0, OA0, OJ1<br>
+	OR4, RI1A,VK0, VP8, VU, ZL5, ZS7<br>
+	ZX0<br></td>
+  <td class="auto-style1" >1 see note#1</td>
+  <td class="auto-style1"><strong>AA</strong>00-05, 10-15, 20-25, 30-35, 40-45, 50-55, 60-65, 70-75, 80-84, 90-94,<strong>AB</strong>
+70-71, 80-81, 90-91, 
+<strong>BA</strong>
+00-04, 10-14, 18, 20-24, 27-28,
+  30-38, 40-99, 
+<strong>BB</strong>00-02,
+  10-12, 20-22, 30-32, 40-43, 50-53, 60-64, 70-74, 80-85, 90-95, 
+<strong>CA</strong>00-99, 
+<strong>CB </strong>00-04, 10-15, 20-25, 30-35, 40-45, 50-56, 70-76, 80-86, 90-96, 
+	<strong>DA</strong>00-99, 
+<strong>DB</strong>
+00-06, 10-16, 20-26, 30-36, 40-45, 50-54, 60-64, 70-74, 80-84,
+  86-87, 90-98, 
+<strong>EA</strong>00-99, 
+<strong>EB</strong>
+00-08, 10-18, 20-27, 30-37, 40-47,
+  50-57, 60-67, 70-77, 80-86, 90-97, 
+<strong>FA</strong>
+00-48, 50-58, 60-68, 70-78, 80-99, 
+<strong>FB</strong>
+00-07, 10-17, 21-29, 31-41, 43-49, 51, 53-59, 61, 63-69, 71,
+  74-79, 84-89, 95-99, 
+<strong>FC</strong>
+
+20,
+  30, 40-41, 50, 52-53, 60-63, 70-74, 80-81, 83-87, 90, 93-97, 
+<strong>GA</strong>
+
+00-07, 09, 10-17, 20-27, 30-99,
+  90-99, 
+<strong>GB</strong>
+
+20, 30-31,
+  40-41, 50-52, 60-62, 70-71, 80,<strong> 
+	GC </strong>01 04-08, 15-18, 26, 28,<strong> 
+HA</strong>
+00-99, 
+<strong>HB</strong>
+
+20-22,
+  30-32, 40-42, 50-53, 60-63, 70-73, 80-84, 90-94, 
+<strong>IA</strong>
+00-99, 
+<strong>IB</strong>
+
+00-05,
+  10-16, 20-26, 30-38, 40-48, 50-59, 60-99, 
+<strong>JA</strong>
+00-99, 
+<strong>JB</strong>
+
+00-08,
+  10-99, 
+<strong>KA</strong>
+
+00-99, 
+<strong>KB</strong>
+
+00-99, 
+<strong>KC</strong>
+60-61, 70, 80, 90, 
+<strong>LA</strong>
+00-99, 
+<strong>LB</strong>
+
+00-99,
+  
+<strong>LC</strong>
+
+00-01, 10-11, 20-22,
+  30-32, 40-42, 50-53, 60-64, 70-73, 80-83, 90-92, 
+<strong>MA</strong>
+00-99, <strong>MB</strong>00-99, 
+<strong>MC</strong>
+00-02, 10-12, 20-22, 30-32, 40-42, 60, 70, 80, 90-92, 
+<strong>NA </strong>00-99, 
+<strong>NB</strong>
+00-99, 
+<strong>NC</strong>
+
+00-02,
+  10-12, 20-23, 30-33, 40-43, 50-53, 60-63, 70-73, 80-83, 90-94, 
+<strong>OA</strong>
+
+00-99, 
+<strong>OB</strong>
+00-99, 
+<strong>OC</strong>
+
+00-04,
+  10-14, 20-23, 30-33, 40-43, 50-54, 61-64, 70-73, 80-83, 90-93, 
+<strong>PA</strong>
+
+00-99, 
+<strong>PB</strong>
+00-99, 
+<strong>PC</strong>
+
+00-03,
+  10-13, 20-23, 30-33, 40-43, 50-53, 60-63, 70-73, 80-83, 90-93, 
+<strong>QA</strong>
+
+00-99, 
+<strong>QB</strong>
+00-99, 
+<strong>QC</strong>
+
+00-03,
+  10-13, 20-22, 30-32, 40-41, 50-51, 60-61, 70-71, 80-81, 90, 
+<strong>RA</strong>
+
+00-17, 20-27, 30-36, 40-46, 50-56,
+  60-66, 70-76, 80-85, 90-95, 
+<strong>RB</strong>
+01-09, 11-19, 25-29, 31-33, 35-39, 42-43, 46,49, 57-58
+</td>
+  <td class="auto-style1">AN</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Cuba</td>
+  <td class="auto-style1">CM, CO</td>
+  <td class="auto-style1">6</td>
+  <td class="auto-style1"><strong>EL</strong>71-72, 81-83, 91-93, <strong>FK</strong>19, 29,<strong>FL</strong>00-02, 10-12, 20-21</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Morocco</td>
+  <td class="auto-style1"
+>CN</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>IL
+</strong>23-26, 35-38, 46-49,
+  56-59, 69, 79, 
+<strong>IM</strong>
+
+50-53,
+  60-65, 70-75, 80-85, 92-94
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Bolivia</td>
+  <td class="auto-style1"
+>CP</td>
+  <td class="auto-style1"
+>4</td>
+  <td class="auto-style1"><strong>FG</strong>
+58-59, 67-69, 77-79,
+  88-89, 
+<strong>FH</strong>
+
+50-87, 91-96, 
+<strong>GH</strong>
+
+00-03, 11-12
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Portugal</td>
+  <td class="auto-style1"
+>CT</td>
+  <td class="auto-style1"
+>6</td>
+  <td class="auto-style1"><strong>IM</strong>
+56-59, 66-69,<strong> 
+IN</strong>
+
+50-52, 60-61
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Madeira</td>
+  <td class="auto-style1"
+>CT3</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>IM</strong>
+12-13
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Azores</td>
+  <td class="auto-style1"
+>CU</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>HM</strong>
+49, 58-59, 68-69, 76-77
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Uruguay</td>
+  <td class="auto-style1"
+>CV-CX</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>GF</strong>
+05-08, 15-19, 25-29,
+  35-37
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Sable Island</td>
+  <td class="auto-style1"
+>CY0</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>FN</strong>93, 
+<strong>GN</strong>
+
+03-04
+</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+	<tr>
+  <td class="auto-style1">St. Paul Is.</td>
+  <td class="auto-style1">CY9</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FN</strong>97</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Angola</td>
+  <td class="auto-style1"
+>D2-3</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>JH</strong>
+52-54, 62-69, 72-79,
+  82-89, 92-99, 
+<strong>JI </strong>60-64,
+  70-74, 80-83, 90-92, 
+<strong>KH</strong>
+
+02-09,
+  12-13, 17-18, 
+<strong>KI</strong>
+
+00-02
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Cape Verde</td>
+  <td class="auto-style1"
+>D4</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>HK</strong>
+74-77, 84-86
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Comoros</td>
+  <td class="auto-style1"
+>D6</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>LH</strong>
+17-18, 26-27
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1">F.R. Germany<br>&nbsp;after 17 Sep. 73. <br>Y2-Y9 after 3 
+  Oct 90.</td>
+  <td class="auto-style1" style="height: 22">DA-DR</td>
+  <td class="auto-style1">15</td>
+  <td class="auto-style1"><b>JN</b>37-39, 47-49, 57-59,67-69, <b>JO</b>20-21, 30-33,40-44, 50-54, 60-64, 70-73<br> <em>(see also the dedicated <strong>DL award</strong> offered in the Rules under &quot;The Pinnacle Series&quot;)</em></td>
+  <td class="auto-style1">EU</td>
+ </tr>
+  <tr>
+  <td class="auto-style1" >G.D.R. Germany <br>from 17Sep.73 to 2Oct. 90</td>
+  <td class="auto-style1" style="height: 22">DM, Y2-Y9&nbsp; </td>
+  <td class="auto-style1" style="height: 22">4</td>
+  <td class="auto-style1"><b>JO</b>50-53, 60-64, 70-73</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+
+ <tr>
+  <td class="auto-style1" >Philippines</td>
+  <td class="auto-style1">DU-DZ</td>
+  <td class="auto-style1">4</td>
+  <td class="auto-style1"><strong>OJ</strong> 88-89, 98-99, <strong>OK</strong>90-91, 95-96, <strong>PJ</strong>05-09, 16-19, 25-29, 36-39, <strong>PK</strong>00-14, 16-24</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Eritrea</td>
+  <td class="auto-style1"
+>E3</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>KK</strong>
+84-87, 94-97, 
+<strong>LK</strong>
+
+02-04, 12-13
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Palestine</td>
+  <td class="auto-style1">E4</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>KM</strong>71-72</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+	<tr>
+  <td class="auto-style1">N. Cook Is.</td>
+  <td class="auto-style1">E5/n was ZK1</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>AH</strong>78-79, 86, 99,<strong> BI</strong>11</td>
+   <td class="auto-style1">OC</td>
+ </tr>
+	<tr>
+ <td class="auto-style1">S. Cook Is.</td>
+  <td class="auto-style1">E5/s was ZK1</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1" ><strong>AH</strong>81,<strong> BG</strong>08, 18,<strong> BH</strong>00-01, 10</td>
+   <td class="auto-style1">OC</td>
+ 	</tr>
+ <tr>
+  <td class="auto-style1" >Bosnia-Herzegovina&nbsp; <br>after 17Nov.07</td>
+  <td class="auto-style1">E7</td>
+  <td class="auto-style1">3</td>
+  <td class="auto-style1"><strong>JN</strong>83-85, 92-95</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Balearic Is.</td>
+  <td class="auto-style1"
+>EA6-EH6</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>JM</strong>
+08-09, 19, 29, 
+<strong>JN</strong>
+
+10, 20
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Canary Is.</td>
+  <td class="auto-style1"
+>EA8-EH8</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>IL</strong>
+07, 17-18, 27-28, 38-39
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Ceuta &amp; Melilla</td>
+  <td class="auto-style1"
+>EA9-EH9</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>IM</strong>
+75, 85
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Spain</td>
+  <td class="auto-style1"
+>EA-EH</td>
+  <td class="auto-style1"
+>12</td>
+  <td class="auto-style1"><strong>IM</strong>
+66-69, 76-79, 86-89,
+  96-99, 
+<strong>IN</strong>
+
+52-53, 60-63,
+  70-73, 80-83, 90-93, 
+<strong>JM</strong>
+
+08,
+  
+<strong>JN</strong>
+
+00-02, 11-12
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Ireland</td>
+  <td class="auto-style1"
+>EI-EJ</td>
+  <td class="auto-style1"
+>4</td>
+  <td class="auto-style1"><strong>IO</strong>
+51-54, 61-65, 72-73
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Armenia</td>
+  <td class="auto-style1"
+>EK</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>LM</strong>
+29, 39, 
+<strong>LN</strong>
+
+10-11, 20-21
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Liberia</td>
+  <td class="auto-style1"
+>EL</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>IJ</strong>
+46-48, 55-57, 64-65
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Iran</td>
+  <td class="auto-style1">EP-EQ</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>LL</strong>58-59, 67-69, 76-79, 86-89, 95-99, <strong>LM</strong>23-29, 31-48, 50-57, 60-66, 70-78, 80-88, 90-97, 
+	<strong>MM</strong>00-06</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Moldavia</td>
+  <td class="auto-style1"
+>ER</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>KN</strong>
+37-38, 45-48
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Estonia</td>
+  <td class="auto-style1"
+>ES</td>
+  <td class="auto-style1">4</td>
+  <td class="auto-style1"><strong>KO</strong>17-19, 27-29, 37-39, 49</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Ethiopia</td>
+  <td class="auto-style1"
+>ET</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>KJ</strong>
+67-68, 75-79, 84-89,
+  93-99, 
+<strong>KK</strong>
+
+70-72, 80-87,
+  90-97, 
+<strong>LJ</strong>
+
+04-09, 14-19,
+  24-28, 36-37, 
+<strong>LK</strong>
+
+00-04,
+  10, 12-13
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" >Belarus</td>
+  <td class="auto-style1">EU, EV, EW</td>
+  <td class="auto-style1">5</td>
+  <td class="auto-style1"><strong>KO</strong>11-13, 21-24, 31-36, 41-46, 51-55, 63</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Kyrgyzstan</td>
+  <td class="auto-style1"
+>EX</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>MM</strong>
+49,59, 69, 
+<strong>MN</strong>
+
+40, 50-52, 60-62, 70-73, 80-82,
+  91-92
+</td>
+  <td class="auto-style1"
+>AS</td>
+</tr>
+ 
+ <tr
+>
+  <td class="auto-style1" 
+>Tajikistan</td>
+  <td class="auto-style1"
+>EY</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>MM</strong>
+37, 39, 46-49, 57-59,
+  66-69, 77-78, 
+<strong>MN</strong>
+
+40-50
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Turkmenistan</td>
+  <td class="auto-style1"
+>EZ</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>LM</strong>
+67-69, 77-79, 88-89,
+  97-99, 
+<strong>LN</strong>
+
+60-62, 70-71,
+  80-82, 90-92, <strong>MM</strong>05-09, 15-19, 26-28, 37, 
+<strong>MN</strong>
+00-01, 10
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>France</td>
+  <td class="auto-style1"
+>F</td>
+  <td class="auto-style1"
+>15</td>
+  <td class="auto-style1"><strong>IN</strong>77-78, 86-88, 92-99, <strong>JN</strong>02-09, 12-19, 23-29, 33-39, 48, 
+	<strong>JO</strong>00, 10-11, 20</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Guadeloupe</td>
+  <td class="auto-style1"
+>FG</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>FK</strong>
+95-96
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Mayotte</td>
+  <td class="auto-style1"
+>FH</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>LH</strong>
+26-27
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">St. Barthelemy&nbsp; &nbsp;<br>after Dec 14, 2007</td>
+  <td class="auto-style1">FJ</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FK</strong>87</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>New Caledonia</td>
+  <td class="auto-style1"
+>FK</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>RG</strong>19, 28-29, 37-39, 48, <strong>RH</strong>10</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Chesterfield Island</td>
+  <td class="auto-style1"
+>FK/C</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>QH</strong> 13
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Martinique</td>
+  <td class="auto-style1"
+>FM</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>FK</strong>
+94
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Austral Is.</td>
+  <td class="auto-style1"
+>FO</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>BG</strong>
+28, 37, 47, 56, 62-63,
+  66, 72, 75, 82
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Clipperton</td>
+  <td class="auto-style1"
+>FO</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>DK</strong>
+50
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>French Polynesia</td>
+  <td class="auto-style1"
+>FO</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>BG</strong>
+89, 
+<strong>BH</strong>
+
+24, 33, 42-43, 52-55, 63-65,
+  72-75, 81-84, 90-96, 
+<strong>CG</strong>
+
+08-09,
+  16-18, 26, 28, 46, 
+<strong>CH</strong>
+
+00-02,
+  05, 11
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Marquesas Is.</td>
+  <td class="auto-style1"
+>FO</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>BI</strong>
+91-92, 
+<strong>CI</strong>
+
+00-01
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>St. Pierre &amp; Miquelon</td>
+  <td class="auto-style1"
+>FP</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>GN</strong>
+16-17
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Reunion Is.</td>
+  <td class="auto-style1"
+>FR</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>LG</strong>
+78-79
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Glorioso Is.</td>
+  <td class="auto-style1"
+>FR/G</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>LH
+</strong>38
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Juan de Nova, Europa</td>
+  <td class="auto-style1"
+>FR/J,
+  E</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>LG</strong>
+07, 
+<strong>LH</strong>
+
+12,
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Tromelin Is.</td>
+  <td class="auto-style1"
+>FR/T</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>LH</strong>74</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>St. Martin</td>
+  <td class="auto-style1"
+>FS</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>FK</strong>
+88
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Crozet Is.</td>
+  <td class="auto-style1"
+>FT5/W</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>LE</strong>
+53-54, 63
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Kerguelen Is.</td>
+  <td class="auto-style1"
+>FT5X</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>ME</strong>
+40-41, 50
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Amsterdam &amp; St. Paul Island</td>
+  <td class="auto-style1"
+>FT5Z</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>MF</strong>
+81-82
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Wallis &amp; Futuna Isl.</td>
+  <td class="auto-style1">FW</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>AH</strong>16
+</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>French Guiana</td>
+  <td class="auto-style1"
+>FY</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong><span>GJ</span></strong><span>
+22-25, 32-35, 43-44
+</span>
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>England.</td>
+  <td class="auto-style1"
+>G,
+  GX, M, 2E</td>
+  <td class="auto-style1"
+>12</td>
+  <td class="auto-style1"><strong>IN</strong>79, <strong>IO</strong>
+70-71, 80-85, 90-95,
+  <strong>JO</strong>00-03
+<br>
+	<font class="font6">
+	<em>(see also the dedicated <strong>UK award</strong> offered in the Rules under &quot;The 
+	Pinnacle Series&quot;)</em></font></td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Isle of Man<span > </span></td>
+  <td class="auto-style1"
+>GD,
+  GT, MD, 2D</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>IO</strong>
+74
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Northern Ireland</td>
+  <td class="auto-style1">GI, GN, MI, 2I</td>
+  <td class="auto-style1">3</td>
+  <td class="auto-style1"><strong>IO</strong>54,<strong> </strong>64-65, 74</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Jersey</td>
+  <td class="auto-style1">GJ, GH, MJ, 2J</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>IN</strong>89
+</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Scotland</td>
+  <td class="auto-style1">GM, GS, MM, 2M</td>
+  <td class="auto-style1">5</td>
+  <td class="auto-style1"><strong>IO</strong>65-68, 74-78, 84-89, 97, 99, <strong>IP</strong>90</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Guernsey</td>
+  <td class="auto-style1">GU, GP, MU, 2U</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>IN</strong>89</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Wales</td>
+  <td class="auto-style1">GW, GC, MW, 2W</td>
+  <td class="auto-style1">3</td>
+  <td class="auto-style1"><strong>IO</strong>
+71-73, 81-83</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Solomon Is.</td>
+  <td class="auto-style1">H4</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>QH</strong>98, <strong>QI</strong>81-83, 90-92, <strong>RH</strong>07-09, 19</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Temotu Province</td>
+  <td class="auto-style1">H40</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>RH</strong>29, 38-39, <strong>RI</strong>00-01, 11</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Hungary</td>
+  <td class="auto-style1">HA, HG</td>
+  <td class="auto-style1">5</td>
+  <td class="auto-style1"><strong>JN</strong>76, 85-87, 95-98, <strong>KN</strong>06-08, 17-18</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Switzerland</td>
+  <td class="auto-style1"
+>HB</td>
+  <td class="auto-style1"
+>4</td>
+  <td class="auto-style1"><strong>JN</strong>35-37, 45-47, 56</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Liechtenstein</td>
+  <td class="auto-style1"
+>HB0</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>JN</strong>47</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Ecuador</td>
+  <td class="auto-style1"
+>HC</td>
+  <td class="auto-style1"
+>4</td>
+  <td class="auto-style1"><strong>EI</strong>
+95-99, 
+<strong>EJ</strong>
+
+90, 
+<strong>FI</strong>
+05-09, 16-19, 28-29, 
+<strong>FJ</strong>
+00-02, 10, 20
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1">Galapagos Islands</td>
+  <td class="auto-style1"
+>HC8-HD8</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>EI
+</strong>48-49, 58-59, 
+<strong>EJ</strong>
+
+40
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Haiti</td>
+  <td class="auto-style1"
+>HH</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>FK</strong>
+28, 38-39, 48-49
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1">Dominican Republic</td>
+  <td class="auto-style1"
+>HI</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>FK</strong>
+47-49, 58-59, 
+<strong>FL</strong>
+
+40
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Colombia</td>
+  <td class="auto-style1"
+>HJ-HK</td>
+  <td class="auto-style1"
+>10</td>
+  <td class="auto-style1"><strong>FI</strong>
+29, 37-39, 45-49, 55-59, 
+<strong>FJ</strong>
+
+00-02, 10-18, 20-46, 51-56, 62-66,
+  
+<strong>FK</strong>
+
+20-21, 30-32, 41-42
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Malpelo Is.</td>
+  <td class="auto-style1"
+>HK0/M</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>EJ</strong>
+93
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">San Andres &amp; Providencia</td>
+  <td class="auto-style1">HK0/A</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>EK
+</strong>92-93
+</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Republic
+  of Korea</td>
+  <td class="auto-style1"
+>HL, 6K-6N, <br>
+	DS-DT</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>PM</strong>
+34-38, 44-48
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Panama</td>
+  <td class="auto-style1"
+>HO-HP</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>EJ</strong>
+88-89, 97-98, 
+<strong>FJ</strong>
+
+07-09, 17-19
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Honduras</td>
+  <td class="auto-style1"
+>HQ-HR</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>EK</strong>
+54-55, 63-65, 74-75,
+  84-85
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Thailand</td>
+  <td class="auto-style1"
+>HS,
+  E2</td>
+  <td class="auto-style1"
+>5</td>
+  <td class="auto-style1"><strong>NJ</strong>
+96-99, 
+<strong>NK</strong>
+
+88-89, 90-99, 
+<strong>NL</strong>
+
+90, 
+<strong>OJ</strong>
+05-08,<strong> 
+OK</strong>
+
+02-09,
+  12-18, 24-27
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Vatican</td>
+  <td class="auto-style1"
+>HV</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>JN</strong>
+61
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Saudi Arabia</td>
+  <td class="auto-style1"
+>HZ, 7Z</td>
+  <td class="auto-style1">3</td>
+  <td class="auto-style1"><strong>KL</strong>
+76-79, 84-99, 
+<strong>KM</strong>
+
+80-81, 90-92, 
+<strong>LK</strong>
+
+07-09, 16-19, 26-29, 36-39, 47-49,
+  58-59, 68-69, 79, 
+<strong>LL</strong>
+
+00-48,
+  50-56, 60-62, 70-72, 
+<strong>LM</strong>
+
+00-02,
+  10-11
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">The Italy Award</td>
+  <td class="auto-style1">I</td>
+  <td class="auto-style1">4 bars</td>
+  <td class="auto-style1">Hold any <font class="font6">4 Bars from the <strong><em>Italian Collector Achievement</em></strong> or<strong><em>PINNALE Awards</em></strong><span class="style2">as per the table below </span>
+	to claim your IT DX BAR. <em>(see also the dedicated IT award offered in the Rules under &quot;The Pinnacle Series&quot;)</em></font></td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Sardinia</td>
+  <td class="auto-style1"
+>IS0</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>JM</strong>48-49, <strong>JN</strong>40-41</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+  <tr>
+  <td class="auto-style1" 
+>Djibouti</td>
+  <td class="auto-style1"
+>J2</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>LK</strong>
+00-01, 11-12
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+  <tr>
+  <td class="auto-style1" 
+>Abu Ail Island&nbsp; <span class="style12"> b4 15Jul1977</span></td>
+  <td class="auto-style1"
+>J2/A<span class="style12"> </span></td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>LL</strong>47</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Grenada</td>
+  <td class="auto-style1"
+>J3</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>FK</strong>
+91-92
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Guinea-Bissau</td>
+  <td class="auto-style1"
+>J5</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>IK</strong>
+11-12, 21-22, 31-32
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">St. Lucia</td>
+  <td class="auto-style1"
+>J6</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>FK</strong>
+93-94
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Dominica</td>
+  <td class="auto-style1"
+>J7</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>FK</strong>
+95
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>St. Vincents</td>
+  <td class="auto-style1"
+>J8</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>FK</strong>
+92-93
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Japan</td>
+  <td class="auto-style1">JA-JS</td>
+   <td class="auto-style1">3 districts</td>
+  <td class="auto-style1">Hold any <font class="font6">3 Districts<span class="style2"> as per the table below </span>to claim your JA DX BAR.<em>
+	(see also the dedicated JA award offered in the Rules under &quot;The Pinnacle Series&quot;)</em></font></td>
+	<td class="auto-style1">AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Ogasawara</td>
+  <td class="auto-style1">JD1/o</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>QL</strong>04-05, 07, 16-17</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Minami Torishima</td>
+  <td class="auto-style1">JD1/m</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>QL</strong>64</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Okinawa 
+	Prefecture</td>
+  <td style="width: 85px" class="auto-style1">JR6</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>PL</strong>14, 24, 36, 46-48, 55</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >JA Antarctic Stations</td>
+  <td class="auto-style1">8J1</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>KB</strong>28, 82,&nbsp; <strong>KC</strong>90-91, <strong>LB</strong>29</td>
+  <td class="auto-style1">OC</td>
+  <tr>
+  <td class="auto-style1" 
+>Mongolia</td>
+  <td class="auto-style1"
+>JT-JV</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>MN</strong>
+48-49, 55-59, 64-69,
+  73-79, 82-89, 92-99, 
+<strong>NO</strong>
+
+50,
+  60, 70, 90-91, 
+<strong>ON</strong>
+
+02-09,
+  11-19, 21-29, 32-39, 42-49, 52-59, 64-69, 75-79, 86-87, 89, 96-97, 
+<strong>OO</strong>
+
+00-01, 10, 20, 30, 70, 90-91
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Svalbard</td>
+  <td class="auto-style1"
+>JW</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>JQ</strong>
+58-59, 67-69, 76-79,
+  86-89, 97-99, 
+<strong>JR</strong>
+
+90, 
+<strong>KQ</strong>
+
+07-09, 17-19, 26-27, 29, 38-39,
+  48, 59, 
+<strong>KR</strong>
+
+00, 10, 20,
+  30, 50, 60, 80
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Jan Mayen</td>
+  <td class="auto-style1"
+>JX</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>IQ
+</strong>50-51
+</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Jordan</td>
+  <td class="auto-style1"
+>JY</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>KL</strong>
+79, 89, 
+<strong>KM</strong>
+
+70-72, 80-83, 91-93
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >United States of America</td>
+  <td class="auto-style1">K, W, N, AA-AK</td>
+  <td class="auto-style1">25 states</td>
+  <td class="auto-style1">25 States/territories as per the table below to claim your US DX BAR. Please read the GAPA-DWAS in the PINNACLE Series</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <td class="auto-style1" 
+>Guantanamo Bay</td>
+  <td class="auto-style1">KG4</td>
+  <td style="width: 60px" class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FK</strong>29, <strong>FL</strong>20</td>
+  <td class="auto-style1">NA</td>
+  <tr>
+ 
+  <td class="auto-style1" >Guam</td>
+  <td class="auto-style1">KG6&nbsp;b4 1979</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>QK</strong>23</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Mariana Island</td>
+  <td class="auto-style1"
+>KH0<span
+  style='mso-spacerun:yes'> </span></td>
+  <td style="width: 60px" class="auto-style1"
+>2</td>
+  <td class="auto-style1"
+><strong>QK</strong>
+24-29, 35, 
+<strong>QL</strong>20</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" >Baker &amp; Howland Isl</td>
+  <td class="auto-style1"
+>KH1</td>
+  <td style="width: 60px" class="auto-style1"
+>1</td>
+  <td class="auto-style1"
+><strong>AJ</strong>
+10
+</td>
+  <td class="auto-style1">OC</td>
+
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Guam</td>
+  <td class="auto-style1"
+>KH2</td>
+  <td style="width: 60px" class="auto-style1"
+>1</td>
+  <td class="auto-style1"
+><strong>QK</strong>
+23
+</td>
+  <td class="auto-style1">OC</td>
+
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Johnston Island</td>
+  <td class="auto-style1"
+>KH3</td>
+  <td style="width: 60px" class="auto-style1"
+>1</td>
+  <td class="auto-style1"
+><strong>AK
+</strong>56
+</td>
+  <td class="auto-style1">OC</td>
+
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Midway Island</td>
+  <td class="auto-style1"
+>KH4</td>
+  <td style="width: 60px" class="auto-style1"
+>1</td>
+  <td class="auto-style1"
+><strong>AL</strong>
+18
+</td>
+  <td class="auto-style1">OC</td>
+
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Palmyra &amp; Jarvis Isl.</td>
+  <td class="auto-style1"
+>KH5</td>
+  <td style="width: 60px" class="auto-style1"
+>1</td>
+  <td class="auto-style1"
+><strong>AJ
+</strong>85
+</td>
+  <td class="auto-style1">OC</td>
+
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Kingman Reef <br>
+	<span class="style12">b4 
+	Aug 25 2016</span></td>
+  <td class="auto-style1"
+>KH5K </td>
+  <td style="width: 60px" class="auto-style1"
+>1</td>
+  <td class="auto-style1"
+><strong>AJ
+</strong>86
+</td>
+  <td class="auto-style1">OC</td>
+
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Kure Island</td>
+  <td class="auto-style1"
+>KH7K</td>
+  <td style="width: 60px" class="auto-style1"
+>1</td>
+  <td class="auto-style1"
+><strong>AL</strong>
+08
+</td>
+  <td class="auto-style1">OC</td>
+
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>American Samoa</td>
+  <td class="auto-style1"
+>KH8&nbsp;<span
+  style='mso-spacerun:yes'> </span></td>
+  <td style="width: 60px" class="auto-style1"
+>1</td>
+  <td class="auto-style1"
+><strong>AH</strong>
+45, 55
+</td>
+  <td class="auto-style1">OC</td>
+
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Swains Island<br>
+	<span class="style12">after Jul 22, 2006</span></td>
+  <td class="auto-style1"
+>KH8&nbsp;
+  </td>
+  <td style="width: 60px" class="auto-style1"
+>1</td>
+  <td class="auto-style1"
+><strong>AH</strong>
+48
+</td>
+  <td class="auto-style1">OC</td>
+
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Wake Island</td>
+  <td class="auto-style1"
+>KH9</td>
+  <td style="width: 60px" class="auto-style1"
+>1</td>
+  <td class="auto-style1"
+><strong>RK</strong>
+39
+</td>
+  <td class="auto-style1">OC</td>
+
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Navassa Island</td>
+  <td class="auto-style1"
+>KP1</td>
+  <td style="width: 60px" class="auto-style1"
+>1</td>
+  <td class="auto-style1"
+><strong>FK</strong>
+28
+</td>
+  <td class="auto-style1">NA</td>
+
+ </tr>
+  <tr
+>
+  <td class="auto-style1" 
+>US Virgin Islands</td>
+  <td class="auto-style1"
+>KP2</td>
+  <td style="width: 60px" class="auto-style1"
+>1</td>
+  <td class="auto-style1"
+><strong>FK</strong>
+77-78
+</td>
+  <td class="auto-style1">NA</td>
+
+ </tr>
+
+ <tr
+>
+  <td class="auto-style1">US Virgin Islands&nbsp;&nbsp; b4 1979</td>
+  <td class="auto-style1">KV4&nbsp;</td>
+  <td style="width: 60px" class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FK</strong>77-78</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Puerto Rico</td>
+  <td class="auto-style1"
+>KP3,4</td>
+  <td style="width: 60px" class="auto-style1"
+>2</td>
+  <td class="auto-style1"
+><strong>FK</strong>67-68, 77-78</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Desecheo Island<br>
+	<span class="style12">after Mar 1, 1979</span></td>
+  <td class="auto-style1"
+>KP5 </td>
+  <td style="width: 60px" class="auto-style1"
+>1</td>
+  <td class="auto-style1"
+><strong>FK</strong>
+68
+</td>
+  <td class="auto-style1">NA</td>
+
+ </tr>
+
+ <tr>
+  <td class="auto-style1" >US Okinawa<br>b4 May 14 '72</td>
+  <td class="auto-style1">KR6,8<br>></td>
+  <td style="width: 60px; height: 39px;" class="auto-style1">1</td>
+  <td style="height: 39px" class="auto-style1"><strong>PL</strong>14, 24, 36, 46</td>
+    <td style="height: 39px" class="auto-style1">AS</td>
+
+ </tr>
+ <tr>
+<td class="auto-style1" 
+>Swan Island<br>
+<span class="style12">b4 
+	31 Aug 1972</span></td>
+  <td class="auto-style1"
+>KS4><br>
+	</span></td>
+  <td style="width: 60px" class="auto-style1"
+>1</td>
+  <td class="auto-style1"
+><strong>EK</strong>87</td>
+  <td class="auto-style1">NA</td>
+
+ </tr>
+
+ <tr>
+  <td class="auto-style1" 
+>Canal Zone<br>
+	<span class="style12">b4 
+	30 Sep 1979</span></td>
+  <td class="auto-style1"
+>KZ5><br>
+	</span></td>
+  <td style="width: 60px" class="auto-style1"
+>1</td>
+  <td class="auto-style1">  
+  <strong>FJ</strong>09</td>
+    <td class="auto-style1">NA</td>
+
+ </tr>
+
+ <tr>
+  <td class="auto-style1" 
+>Norway</td>
+  <td class="auto-style1"
+>LA-LN</td>
+  <td class="auto-style1"
+>8</td>
+  <td class="auto-style1"><strong>JO
+</strong>28-29, 38-39, 48-49, 59,<strong> 
+JP</strong>
+
+20-22, 30-32, 40-43, 50-54, 60-67,
+  
+<strong>JP</strong>
+
+75-79, 87-89, 98-99, 
+<strong>JO</strong>
+
+90, 
+<strong>KP</strong>
+09, 18-19, 28-29, 39, 49, 59, 
+<strong>KQ</strong>
+00, 10, 20-21, 30-31, 40, 50
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Argentine</td>
+  <td class="auto-style1"
+>LO-LW</td>
+  <td class="auto-style1"
+>20</td>
+  <td class="auto-style1"><strong>FD</strong>
+38-39, 48-49, 55-59,
+  65-66, 75, 
+<strong>FE </strong>30-32,
+  36-37, 40-69, 71-72, 75-79, 87-89, 
+<strong>FF</strong>
+40-89, 91-99, 
+<strong>FG</strong>
+50-55, 60-67, 70-77, 80-88, 90-96, 
+<strong>GF</strong>
+01-09, 11-15, 
+<strong>GG</strong>
+00-05, 10-14, 21-24, 32-34
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Luxembourg</td>
+  <td class="auto-style1"
+>LX</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>JN</strong>
+29, 39, 
+JO
+
+20, 30
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Lithuania</td>
+  <td class="auto-style1"
+>LY</td>
+  <td class="auto-style1"
+>5</td>
+  <td class="auto-style1"><strong>KO</strong>
+05-06, 13-16, 23-26, 35
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Bulgaria</td>
+  <td class="auto-style1"
+>LZ</td>
+  <td class="auto-style1"
+>5</td>
+  <td class="auto-style1"><strong>KN</strong>
+11-13, 21-23, 31-34, 43
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Peru</td>
+  <td class="auto-style1"
+>OA-OC</td>
+  <td class="auto-style1"
+>7</td>
+  <td class="auto-style1"><strong>E</strong>I
+93-96, 
+<strong>FH</strong>
+
+05, 15-19, 24-29, 33-39, 41-49,
+  52-58, 
+<strong>FI</strong>
+
+00-06, 10-17,
+  20-37, 40, 45-47,
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Lebanon</td>
+  <td class="auto-style1"
+>OD</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>KM</strong>
+73
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Austria</td>
+  <td class="auto-style1"
+>OE</td>
+  <td class="auto-style1"
+>6</td>
+  <td class="auto-style1"><strong>JN</strong>
+46-47, 56-57, 66-68,
+  76-78, 86-88
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1">Finland</td>
+  <td class="auto-style1"
+>OF-OI</td>
+  <td class="auto-style1"
+>10</td>
+  <td class="auto-style1"><strong>KP</strong>00-03, 08-09, 10-13,  16-18, 20-28, 30-49, 51-55</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Aland Island</td>
+  <td class="auto-style1">OH0</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>KP</strong>00, <strong>&nbsp;JP</strong> 90</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Market Reef</td>
+  <td class="auto-style1">OJ0,
+  OH0M</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>JP</strong>90</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Czechoslovakia<br>
+	<span class="style12">b4 December 31, 1992</span></td>
+  <td class="auto-style1"
+>OK-OM</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>JN</strong>
+68-69, 78-79, 88-89,
+  98-99, 
+<strong>JO</strong>
+
+60, 70, 80
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Czech Republic<br> anuary 1, 1993 and after</td>
+  <td class="auto-style1">OK-OL</td>
+  <td class="auto-style1">5</td>
+  <td class="auto-style1"><strong>JN</strong>68-69, 78-79, 88-89, 98-99,<strong>JO</strong>60, 70, 80</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Slovakia<br>January 1, 1993 and after</td>
+  <td class="auto-style1">OM</td>
+  <td class="auto-style1">4</td>
+  <td class="auto-style1"><strong>JN</strong>87-88, 97-99,<strong>KN</strong>08-09, 18-19</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Belgium</td>
+  <td class="auto-style1"
+>ON-OT</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>JN</strong>
+29, 
+<strong>JO</strong>
+
+10-11, 20-21, 30
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Greenland</td>
+  <td class="auto-style1"
+>OX</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>FQ</strong>
+37-38, 46-48, 56-59,
+  65-69, 76-79, 86-89, 95-99, 
+<strong>FR</strong>
+60, 70-71, 80-81, 90-91, 
+<strong>FQ</strong>37, 47, 56, <strong>GO</strong>89,<strong> GP</strong>
+29, 37-39, 42-49, 50-89, 60-61, 70, 80-82, 93-99, <strong>GQ</strong>
+05-09, 12-99, 
+<strong>GR</strong>
+00-02, 10-12, 20-22, 31-32, 41-42, 50-52, 60-63, 70-73, 80-83,
+  90-93, 
+<strong>HP</strong>
+
+05-09, 15-19,
+  25-29, 36-39, 48-49, 58-59, 68-69, 79, 89, 
+<strong>HQ </strong>00-89, 92-99, 
+<strong>HR</strong>
+00-03, 10-13, 20-23, 30-33, 40-43, 50-53, 60-63, 70-72, 80-82,
+  90-92, 
+<strong>IQ</strong>
+
+04-09, 14-15, 17-19, 
+<strong>IR</strong>
+
+00-02, 10-11, 20-21, 31
+</td>
+  <td class="auto-style1"
+>NA<br>
+	<br>
+	</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Faroe Island</td>
+  <td class="auto-style1"
+>OY</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>IP</strong>
+61-62
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Denmark</td>
+  <td class="auto-style1"
+>OZ</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>JO</strong>
+44-47, 54-57, 64-66, 75
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Papua New Guinea</td>
+  <td class="auto-style1"
+>P2</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>QH
+</strong>49, 
+<strong>QI</strong>
+
+00-07, 10-16, 22-26, 30-34, 40-41,
+  43-44, 53-55, 57, 65-66
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>North Korea</td>
+  <td class="auto-style1"
+>P5</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>PM</strong>
+27-29, 37-39, 48, 
+<strong>PN</strong>
+
+20, 30-31, 40-42, 52
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Netherlands</td>
+  <td class="auto-style1"
+>PA-PI</td>
+  <td class="auto-style1"
+>4</td>
+  <td class="auto-style1"><strong>JO</strong>
+11, 20-23, 30-33
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+	<tr>
+  <td class="auto-style1">Aruba</td>
+  <td class="auto-style1">P4</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FK</strong>42, 52</td>
+  <td class="auto-style1">SA</td>
+ </tr>
+	<tr>
+  <td class="auto-style1">Curacao</td>
+  <td class="auto-style1">PJ2</td>
+  <td class="auto-style1">1&nbsp;</td>
+  <td class="auto-style1"><strong>FK</strong>52</td>
+  <td class="auto-style1">SA</td>
+ </tr>
+	<tr>
+  <td class="auto-style1">Bonaire</td>
+  <td class="auto-style1">PJ4</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FK</strong>52</td>
+  <td class="auto-style1">SA</td>
+ </tr>
+	<tr>
+  <td class="auto-style1">Sint Eustatius<br>
+	<span class="style12">after Oct 10, 2010</span></td>
+  <td class="auto-style1">PJ5 </td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FK</strong>87</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+	<tr>
+  <td class="auto-style1">Saba<br>after Oct 10, 2010</td>
+  <td class="auto-style1">PJ6<span> &nbsp;</span></td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FK</strong>87</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+	<tr>
+  <td class="auto-style1">Sint Maarten<br>after Oct 10, 2010</td>
+  <td class="auto-style1">PJ7&nbsp; </td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FK</strong>88</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Netherlands Antilles<br>b4 October 10th 2010</td>
+  <td class="auto-style1">PJ2,4,9&nbsp;</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FK</strong>52</td>
+  <td class="auto-style1">SA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">St. Maarten, Saba, St.Eustatius<br>b4 October 10th 2010</td>
+  <td class="auto-style1">PJ5-8</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FK</strong>87-88</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Fernando de Noronha</td>
+  <td class="auto-style1"
+>PY0F</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>HI
+</strong>36
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>St.Peter &amp; Paul Rocks</td>
+  <td class="auto-style1"
+>PY0S</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>HJ</strong>
+50
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Trindade &amp; Martim Vaz Island</td>
+  <td class="auto-style1"
+>PY0T</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>HG</strong>
+49, 59
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Brasil</td>
+  <td class="auto-style1"
+>PP-PY</td>
+  <td class="auto-style1"
+>20</td>
+  <td class="auto-style1"><strong>FH</strong>
+49, 59, 69, 77-79, 87-89,
+  93-99, 
+<strong>FI</strong>
+
+30-35, 40-45,
+  50-99, 
+<strong>FJ</strong>
+
+50-51, 60-61,
+  70-74, 80-84, 90-95, 
+<strong>GF</strong>
+
+19,
+  28-29, 36-39, 47-49, 
+<strong>GG</strong>
+
+10-11,
+  17-19, 20-22, 24-59, 65-69, 76-79, 87-89, 97-99, 
+<strong>GH</strong>
+03-99, 
+<strong>GI </strong>00-78,
+  80-87, 90-97, 
+<strong>GJ</strong>
+
+00-01,
+  10-11, 20-22, 30-32, 40-44,<strong> 
+HH </strong>00-09, 17-19, 
+<strong>HI</strong>
+00-06, 10-15, 20-24
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Suriname</td>
+  <td class="auto-style1"
+>PZ</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>GJ</strong>
+04, 11-15, 22-25
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Franz Josef Land</td>
+  <td class="auto-style1"
+>R1FJ</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>LQ
+</strong>59, 99, 
+<strong>LR </strong>20, 30, 40, 50-51, 60, 70-71,
+  80-81, 90-91, 
+<strong>MR</strong>
+
+00-01,
+  10-11, 20-21
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Malyj Vysotskij Isl.<br>b4 16 Feb 2012</td>
+  <td class="auto-style1">R1MV</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>KP</strong>40</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Western Sahara</td>
+  <td class="auto-style1"
+>S0</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>IL</strong>
+10-13, 21-26, 31-37,
+  46-47, 56-57
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Bangladesh</td>
+  <td class="auto-style1"
+>S2</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>NL</strong>
+41-46, 52-55, 61-65
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Slovenia</td>
+  <td class="auto-style1"
+>S5</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>JN
+</strong>65-66, 75-76, 86
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1">Seychelles </td>
+  <td class="auto-style1"
+>S7</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>LI
+</strong>30, 50, 62-65, 74-76,
+  82-83
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1">Sao Tome &amp; Pincipe</td>
+  <td class="auto-style1"
+>S9</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>JI</strong>
+39, 
+<strong>JJ</strong>
+
+30-31
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Sweden</td>
+  <td class="auto-style1"
+>SA-SM</td>
+  <td class="auto-style1"
+>10</td>
+  <td class="auto-style1"><strong>JO</strong>
+57-59, 65-69, 75-79,
+  86-89, 98-99, 
+<strong>JP</strong>60-64,70-76, 80-87, 90, 92-98,<strong>KP</strong>03-08, 15-18, 25</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" 
+>Poland</td>
+  <td class="auto-style1"
+>SN-SR</td>
+  <td class="auto-style1"
+>10</td>
+  <td class="auto-style1"><strong>JN
+</strong>99, 
+<strong>JO</strong>
+
+70-74, 80-84, 90-94, 
+<strong>KN </strong>09, 19, 
+<strong>KO</strong>
+00-04, 10-14
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Sudan. Rep of</td>
+  <td class="auto-style1"
+>ST</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>KJ</strong>
+18-19, 28-29, 39, 49, 59,
+  69, 79, 
+<strong>KK</strong>
+
+10-15, 20-29,
+  30-39, 40-49, 50-59, 60-69, 70-79, 82-89, 97-98, 
+<strong>KL</strong>
+20-21, 30-31, 40-41, 50-52, 60-61, 70-73, 80-82
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Egypt</td>
+  <td class="auto-style1"
+>SU</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>KL</strong>
+22-29, 32-39, 42-49,
+  52-59, 61-69, 72-76, 78-79, 
+<strong>KM</strong>
+20-21, 30-31, 40-41, 50-51, 60-61, 70-71
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Mount Athos</td>
+  <td class="auto-style1"
+>SV/A</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>KN</strong>
+20
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Dodecanese</td>
+  <td class="auto-style1"
+>SV5</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>KM</strong>
+26-27, 35-37, 46
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Crete</td>
+  <td class="auto-style1"
+>SV9</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>KM</strong>
+15, 24-25, 35
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Greece</td>
+  <td class="auto-style1"
+>SV-SZ</td>
+  <td class="auto-style1"
+>6</td>
+  <td class="auto-style1"><strong>KM</strong>
+06-09, 16-19, 
+<strong>KM</strong>
+
+27-29,<strong> 
+KM</strong>
+38-39, 
+<strong>KN</strong>
+
+00,
+  10-11, 20-21, 31
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Tuvalu</td>
+  <td class="auto-style1"
+>T2</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>RH</strong>
+87, 97, 99, 
+<strong>RI</strong>
+
+82-84, 90-92
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>W.Kiribati (Gilbert Is.)</td>
+  <td class="auto-style1"
+>T30</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>RI</strong>
+78-79, 87-88, 
+<strong>RJ</strong>
+
+60-63
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>C.Kiribati (Line Isl.)</td>
+  <td class="auto-style1"
+>T31</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>AJ</strong>
+94-95, 
+<strong>BH</strong>
+
+38, 48-49, 
+<strong>BI</strong>
+
+24-26, 40, 43
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>E.Kiribati (Br. Phoenix Is)</td>
+  <td class="auto-style1"
+>T32</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>AI</strong>
+25-26, 34-35, 45-47
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Banaba Island</td>
+  <td class="auto-style1"
+>T33</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>RI</strong>
+49
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Somalia</td>
+  <td class="auto-style1"
+>T5</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>LI</strong>
+08-09, 19, 
+<strong>LJ</strong>
+
+00-03, 10-14, 19, 21-25, 28-29,
+  32-39, 44-49, 58-59, 
+<strong>LK</strong>
+
+10,
+  20, 30-31, 40-41, 50-51
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>San Marino</td>
+  <td class="auto-style1"
+>T7</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>JN</strong>
+63
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr
+>
+  <td class="auto-style1" 
+>Palau</td>
+  <td class="auto-style1"
+>T8,
+  KC6</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>PJ</strong>
+54, 64-65, 76-77
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Bosnia-Herzegovina ~ b4 17Nov07 </td>
+  <td class="auto-style1">T9 </td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>JN</strong>
+83-85, 93-95</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Turkey</td>
+  <td class="auto-style1"
+>TA-TC</td>
+  <td class="auto-style1"
+>7</td>
+  <td class="auto-style1"><strong>KM</strong>
+36-39, 46-49, 56-59,
+  66-69, 76-79, 86-89, 96-99,<strong> 
+KN</strong>
+30-31, 40, 50-51, 60-61, 70-71, 80-81, 90, 
+<strong>LM</strong>
+
+07-09, 17-19, 27-29, 
+<strong>LN</strong>
+
+00-01, 10-11
+</td>
+  <td class="auto-style1"
+>EU/AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Iceland</td>
+  <td class="auto-style1"
+>TF</td>
+  <td class="auto-style1"
+>4</td>
+  <td class="auto-style1"><strong>HP</strong>
+74-75, 83-86, 93-96, 
+<strong>IP</strong>
+
+03-06, 13-16, 24, 26
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Guatemala</td>
+  <td class="auto-style1"
+>TG,
+  TD</td>
+  <td class="auto-style1"
+>4</td>
+  <td class="auto-style1"><strong>EK</strong>
+43-47, 54-57
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Costa Rica</td>
+  <td class="auto-style1"
+>TI,
+  TE</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>EJ</strong>
+79, 88-89, 
+<strong>EK</strong>
+
+70-71, 80
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Cocos Island</td>
+  <td class="auto-style1"
+>TI9</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>EJ</strong>
+65
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Cameroon</td>
+  <td class="auto-style1"
+>TJ</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>JJ
+</strong>41-46, 52-56, 62-69,
+  71-79, 
+<strong>JK</strong>
+
+60, 70-72
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Corsica</td>
+  <td class="auto-style1"
+>TK</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>JN</strong>
+41-42
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Central African Rep.</td>
+  <td class="auto-style1"
+>TL</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>JJ</strong>73-77, 82-87, 93-98, <strong>KJ</strong>04-09, 14-19, 25-28, 35-37,<strong>KK</strong>00, 10</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Congo</td>
+  <td class="auto-style1">TN</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>JI</strong>55-56, 65-67, 75-79, 86-89,<strong>JJ</strong>61, 70-71, 80-83, 91-93</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Gabon</td>
+  <td class="auto-style1"
+>TR</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>JI</strong>
+48-49, 56-59, 67-69,
+  77-79,<strong> 
+JJ </strong>40, 50-51,
+  60-61, 70
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Chad</td>
+  <td class="auto-style1"
+>TT</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>JJ
+</strong>77-79, 87-89, 98-99, 
+<strong>JK</strong>
+
+63-64, 70-99, 
+<strong>JL</strong>
+
+70-73, 80-83, 90-92, 
+<strong>KJ</strong>
+
+09, 
+<strong>KK</strong>
+00-09, 11-12, 14-19,<strong> 
+KL</strong>
+00-01, 10
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Ivory Coast</td>
+  <td class="auto-style1"
+>TU</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>IJ</strong>
+56-57, 64-69, 75-79,
+  85-89
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Benin</td>
+  <td class="auto-style1"
+>TY</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>JJ</strong>
+06-09, 16-19, 
+<strong>JK</strong>
+
+00-01, 10-12
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Mali</td>
+  <td class="auto-style1"
+>TZ</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>IK</strong>
+42-45, 52-55, 60-65,
+  70-79, 83-89, 94-99,<strong> IL</strong>63-64,70-74, 80-83, 90-92, <strong>JK</strong>
+05-09,15-19, 26-28,<strong>JL</strong>00-01</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Kaliningrad</td>
+  <td class="auto-style1">UA2</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>JO</strong>94,<strong>KO</strong>04-05, 14-15</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Eu. Russia (UA-EU)</td>
+  <td class="auto-style1" style="height: 22">UA-UI1,3,4,6,<br>RA-RZ</td>
+  <td class="auto-style1">25</td>
+  <td class="auto-style1"><strong>KN</strong>                          
+  84-87, 93-97, <strong>KO</strong>
+36-39, 45-49, 52-59, 62-69, 70-99,
+  <strong>KP</strong>
+40-41, 50-88, 90-94,  96-98, 
+<strong>LN</strong>
+03-09, 12-19,
+  22-29, 31-39, 41, 45-47, 
+<strong>LO</strong>
+00-49, 51-59, 63-69, 75-78,<strong> 
+LP</strong>
+00-07, 10-18, 20-28, 30-37, 40-42, 44-47, 50, 54, 56-58, 60,
+  67-68, 77-78, 87-88, 96-98, 
+<strong>MP</strong>
+06-09, 17-19, 28-29
+</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >As. Russia (UA-AS)</td>
+  <td class="auto-style1" style="height: 22">UA-UI8,9,0,<br>RA-RZ</td>
+  <td class="auto-style1">25</td>
+  <td class="auto-style1"><strong>LO</strong>
+49, 51-52, 59, 61-66,
+  68-69, 70-99, 
+<strong>LP</strong>
+23-24,
+  32-34, 40-46, 50-56, 60-67, 70-78, 80-88, 90-98, 
+<strong>MO</strong>
+00-09, 14-19, 24-29, 34-39, 44-49, 54-59, 63-69, 73-79, 82-89,
+  90-99, 
+<strong>MP</strong>
+
+00-07, 10-18,
+  20-38, 40-99, 
+<strong>MQ</strong>
+
+30-31,
+  40-43, 50-53, 60-62, 70-73, 80-82, 90-92, 
+<strong>NO</strong>
+00-99, 
+<strong>NP</strong>
+
+00-99,
+  
+<strong>NQ</strong>
+
+00-03, 10-13, 20-24,
+  30-35, 40-45, 50-55, 60-66, 70-76, 80-86, 90-96, 
+<strong>OO</strong>
+01-99, 
+<strong>OP</strong>
+
+00-99,
+  
+<strong>OQ</strong>
+
+00-07, 10-17, 20-27,
+  30-37, 40-46, 50-56, 60-66, 70-73, 80-83, 90-93, 
+<strong>PN</strong>
+39, 48-49, 52-55, 57-59, 62-69, 73-79, 84-89, 96-99, 
+<strong>PO</strong>
+
+-01-09, 13-19, 22-29, 30-94,
+  96-99, 
+<strong>PP</strong>
+
+00-99, 
+<strong>PQ</strong>00-03, 10-13, 20-23, 30-33, 40-43, 50, 60-61, 70-71, 80-81, 90-92, <strong>QN</strong>05-09, 15-19, 28-29, 68, 73-76, 78-79,<strong>QO</strong>
+00-04, 07-09, 19, 29, 39, 49,
+  58-59, 68-69, 73-76, 79, 80-87, 91-99, 
+<strong>QP</strong>
+00-79, 81-89, 91-99, 
+<strong>QQ</strong>
+00-02, 10-12, 20-22, 30-32, 40-42, 50-51, 60, 70, 80-81, 90, 
+<strong>RO</strong>
+
+04-09, 14-19, 29, 
+<strong>RP</strong>
+
+00-59, 61-69, 71-79, 82-89, 92-99,<strong>
+  
+AP</strong>
+
+05-08, 15-18, 24-27,
+  34-36, 45-46, 55-56
+</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Uzbekistan</td>
+  <td class="auto-style1"
+>UJ-UM</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>LN</strong>
+81-85, 92-93, 
+<strong>MM</strong>
+
+19, 28-29, 37-39, 48-49,<strong> 
+MN</strong>
+
+01-04, 10-13, 20-23, 30-32, 40-41,
+  50-52, 60-61
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Kazakhstan</td>
+  <td class="auto-style1"
+>UN-UQ</td>
+  <td class="auto-style1"
+>6</td>
+  <td class="auto-style1"><strong>LN
+</strong>37-39, 46-49, 53-59,
+  61-69, 71-79, 85-89, 95-99, 
+<strong>LO</strong>
+30, 40-41, 50-51, 60-61, 70, 80-81, 90, 
+<strong>MN</strong>
+
+03-09, 13-19, 22-49, 52-59, 62-69,
+  71-79, 82-89, 92-99, 
+<strong>MO</strong>
+
+00-03,
+  10-14, 20-24, 30-34, 40-45, 50-55, 60-64, 70-74, 80-84, 90-92, 
+<strong>NN</strong>
+
+02-09, 15-19, 26-29, 38-39, 
+<strong>NO </strong>00-01, 10, 20
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1">Ukraine</td>
+  <td class="auto-style1" >UR-UZ, EM-EO</td>
+  <td class="auto-style1">10</td>
+  <td class="auto-style1" ><strong>KO</strong>
+10-11, 20-21, 30-31,
+  40-41, 50-52, 60-62, 70-72, 80, 
+<strong>KN</strong>
+17-19, 27-29, 37-39, 45-49, 
+55-59, 64-69, 74-79, 85-89,
+  97-99,<strong>LN</strong>08-09</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Antigua &amp; Barbuda</td>
+  <td class="auto-style1"
+>V2</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>FK
+</strong>97
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Belize</td>
+  <td class="auto-style1"
+>V3</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>EK</strong>
+55-58, 66-68
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >St. Kitts &amp; Nevis</td>
+  <td class="auto-style1"
+>V4</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>FK</strong>
+87
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Namibia</td>
+  <td class="auto-style1"
+>V5</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>JG</strong>
+68-69, 71-79, 81-89,
+  91-99, 
+<strong>JH</strong>
+
+52, 60-62,
+  70-72, 80-82, 90-92, 
+<strong>KG</strong>
+
+08-09,
+  
+<strong>KH</strong>
+
+00-01, 11-12, 21-22
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Micronesia</td>
+  <td class="auto-style1"
+>V6</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>PJ</strong>
+88, 99, 
+<strong>PK</strong>
+
+90, 
+<strong>QL</strong>
+08-09, 16-17, 27-29, 37-38, 47-48, 57-58, 65-68, 71, 73, 77-78,
+  85-87, 96-97, 
+<strong>RJ</strong>
+
+06, 15
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Marshall Is.</td>
+  <td class="auto-style1"
+>V7</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>RJ</strong>
+28-29, 38-39, 44-49,
+  55-59, 65-66, 
+<strong>RK</strong>
+
+11,
+  20-21, 31, 40-41, 52
+</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Brunei</td>
+  <td class="auto-style1"
+>V8</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>OJ</strong>
+74
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Canada</td>
+  <td class="auto-style1">VE</td>
+  <td class="auto-style1">4 provs.</td>
+  <td class="auto-style1">Hold any 4 Provinces, see<strong><em> Canadian Collector table</em></strong> below your <br>
+	VE DX BAR. <br><em>(see also the dedicated VE award offered in the Rules under &quot;The Pinnacle Series&quot;)</em></td/>
+  <td class="auto-style1">NA</td>
+ </tr>
+   <tr>
+  <td class="auto-style1" >Marine</td>
+  <td class="auto-style1">VE0</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1">VE0 issued for marine use. Any VE0 confirmed, counts</td>
+  <td class="auto-style1">m/m</td>
+
+ </tr>
+
+   <tr>
+  <td class="auto-style1" >NWT</td>
+  <td class="auto-style1">VE8</td>
+  <td class="auto-style1">3</td>
+  <td class="auto-style1">
+	CP17-18, 27-29, 34-39, 
+	43-49, 51-59, 60-99, <b>CQ</b> 71-74, 80-86, 91-97,<b>DP</b>00-07, 10-17, 
+	20-26, 30-35, 40-45, 50-55, 60-64, 70-74, 80-84, <b>DQ</b>00-07, 10-17, 
+	20-28, 30-32, 34-38, 40-48</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+  <tr>
+  <td class="auto-style1">NUN</td>
+  <td class="auto-style1">VY0</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1">CP97-99, <b>DP</b> 
+	07-09, 16-19, 26-29, 35-39, 45-49, 54-59, 64-69, 74-79, 84-89, 90-99, <b>DQ</b> 
+	50-56, 58, 60-63, 65-66, 69, 70-73, 75-80, 82, 85-93, 95-99 , <b>EO</b> 94, 
+	99, <b>EP</b>00 -29, 31-39, 42-49, 53-59, 63-68, 73-79, 82-89, 91-94, 97-99,
+	<b>EQ</b> 01-09, 10-18, 20-39, 42-46, 48-99, <b>ER</b> 00, 20-21, 30-31, 
+	40-41, 50-52, 60-62, 70-72, 80-82, 90-92, <b>FO</b> 06-08, <b>FP</b> 04-05, 
+	08-09, 14-15, 17-19, 24-29, 33-39, 42-49, 52-59, 61-69, 71-77, 84-87, 96, <b>
+	FQ</b> 00-02, 04-12, 18-22, 28-31, 39-41, 46-48, 50, 56-59, 65-69, 76-79, 
+	86-89, 96-99, <b>FR</b> 00-02, 10-13, 20-23, 30-33, 40-43, 50-53, 60-62, 
+	71-72, 81-82, 92</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+  <tr>
+  <td class="auto-style1">YUK</td>
+  <td class="auto-style1">VY1</td>
+  <td class="auto-style1">3</td>
+  <td class="auto-style1">BP90-99, <b>CP</b>00-26, 30-36, 40-44, 50-52, 60-61, 70</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+  <tr>
+  <td class="auto-style1" >Sable Island</td>
+  <td class="auto-style1">CY0</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><b>FN</b>93, <b>G</b>N 03-04</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+  <tr>
+  <td class="auto-style1" >St. Paul</td>
+  <td class="auto-style1">CY9</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><b>FN</b>97</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+
+ <tr>
+  <td class="auto-style1">Australia</td>
+  <td class="auto-style1">VK</td>
+  <td class="auto-style1">3 terr.</td>
+  <td class="auto-style1">Hold any 3 Territories as per VK entities below and /or any VK1 thro VK8 to claim your VK DX BAR. <br><em>(see also the dedicated VK award offered in the Rules under &quot;The Pinnacle Series&quot;)</em></td>
+  <td class="auto-style1">AS</td>
+ </tr>
+  <tr>
+  <td class="auto-style1" >Heard Is.</td>
+  <td class="auto-style1">VK0h</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>MD</strong>66-67</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Macquarie Is.</td>
+  <td class="auto-style1">VK 0m</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>QD</strong>95</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Cocos-Keeling</td>
+  <td class="auto-style1">VK9C</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>NH</strong>87</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Lord Howe Is.</td>
+  <td class="auto-style1">VK9</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>QF</strong>98</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Mellish Reef</td>
+  <td class="auto-style1">VK9M</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>QH</strong>72</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Norfolk Is.</td>
+  <td class="auto-style1">VK9N</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>RG</strong>30</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Willis Is.</td>
+  <td class="auto-style1">VK9W</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>QG</strong>68, 77-78, <strong>QH</strong>35-36,42-44, 52</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Christmas Is.</td>
+  <td class="auto-style1">VK9X</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>OH</strong>29</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Anguilla</td>
+  <td class="auto-style1">VP2E</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FK</strong>88</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+  <tr>
+  <td class="auto-style1" >Montsarrat</td>
+  <td class="auto-style1">VP2M</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FK</strong>86</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >British Virgin Is</td>
+  <td class="auto-style1">VP2V</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FK</strong>78</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Turks &amp; Caicos</td>
+  <td class="auto-style1">VP5</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FL</strong>31, 41</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Pitcarn Islands</td>
+  <td class="auto-style1">VP6</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>CG</strong>44</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Pitcarn Islands&nbsp; b4 1 May 98</td>
+  <td class="auto-style1">VR6 </td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>CG</strong>44</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Ducie Island</td>
+  <td class="auto-style1">VP6/d</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>CG</strong>75</td>
+  <td class="auto-style1">OC</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Falkland Island</td>
+  <td class="auto-style1">VP8/f</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>FD</strong>97-98, <strong>GD</strong>07-08, 18</td>
+  <td class="auto-style1">SA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >South Georgia</td>
+  <td class="auto-style1">VP8/g</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>HD</strong>60-63</td>
+  <td class="auto-style1">SA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >South Orkney Islands</td>
+  <td class="auto-style1">VP8/o</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>CG</strong>69, 79</td>
+  <td class="auto-style1">SA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >South Sandwich Islands</td>
+  <td class="auto-style1">VP8/s</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>HD</strong>60-63</td>
+  <td class="auto-style1">SA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >South Shetland Islands</td>
+  <td class="auto-style1">VP8/h</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>FC</strong>86-87, 96-97, <strong>GC</strong>04-08, 
+	15-18, 26-29, 38-39</td>
+  <td class="auto-style1">SA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >UK Antarctic</td>
+  <td class="auto-style1">VP8</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FA</strong>00-48, 50-58, 60-68, 70-78, 80-99,
+	<strong>FB</strong>00-07, 10-17, 21-29, 31-41, 43-49, 51, 53-59, 61, 63-69, 
+	71, 74-79, 84-89, 95-99, <strong>FC</strong>20, 30, 40-41, 50, 52-53, 60-63, 
+	70-74, 80-81, 83-87, 90, 93-97, <strong>GA</strong>00-07, 09, 10-17, 20-27, 
+	30-99, 90-99, <strong>GB</strong>20, 30-31, 40-41, 50-52, 60-62, 70-71, 80,
+	<strong>HA</strong>00-99, <strong>HB</strong>20-22, 30-32, 40-42, 50-53, 
+	60-63, 70-73, 80-84, 90-94</td>
+  <td class="auto-style1">AN</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Bermuda</td>
+  <td class="auto-style1">VP9</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>FM</strong>72</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Hong Kong</td>
+  <td class="auto-style1">VR</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>OL</strong>72</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+  <tr>
+  <td class="auto-style1" >Chagos (Indian Ocean)</td>
+  <td class="auto-style1">VQ9</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>MI</strong>53-54, 62-64</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+
+ <tr>
+  <td class="auto-style1" >India</td>
+  <td class="auto-style1"
+>VU</td>
+  <td class="auto-style1"
+>10</td>
+  <td class="auto-style1"><strong>MJ</strong>
+88-89, 98-99, 
+<strong>MK</strong>
+
+65-69, 71-99,<strong> 
+ML</strong>
+
+41-44, 46-47, 50-57, 60-99, 
+<strong>NK</strong>
+
+02-09, 16-19, 28-29,<strong> 
+NL</strong>
+
+00-08, 10-17, 20-27, 30-36, 41-47,
+  53-56, 62-68, 73-79, 87-89, 
+<strong>MM</strong>
+70-74, 80-85, 90-94
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Andaman &amp; Nicobar Is.</td>
+  <td class="auto-style1"
+>VU/A,N</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>NJ
+</strong>66-69, 
+<strong>NK</strong>
+
+60-64
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Lakshadweep Is.</td>
+  <td class="auto-style1"
+>VU/L</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>MK</strong>
+52, 60-61
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Revilla Gigedo</td>
+  <td class="auto-style1"
+>XA4-XI4</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>DK</strong>
+	28, 39, 48-49&nbsp; [4 islands]</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Mexico</td>
+  <td class="auto-style1"
+>XE</td>
+  <td class="auto-style1"
+>10</td>
+  <td class="auto-style1"><strong>DK</strong>78-79, 87-89, 97-99,<strong>DL</strong>27-29, 34-39, 42-49, 52-59, 62-99,
+  
+<strong>DM</strong>10-12, 20-22, 30-32,
+  40-41, 50-51, 60-61, 70-71, 
+<strong>EK</strong>
+06-09, 15-19, 25-28, 34-38, 45-49, 57-59, 68-69, 
+<strong>EL</strong>
+
+00-07, 10-16, 40-41, 50-51, 60-61
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Burkina Faso</td>
+  <td class="auto-style1"
+>XT</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>IJ</strong>
+79, 89, 
+<strong>IK</strong>70-73, 80-84, 90-95,<strong>JK</strong>01-04, 11-12</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+	<tr>
+  <td class="auto-style1">Revilla Gigedo</td>
+  <td class="auto-style1">XA4-XI4</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>DK</strong>28, 39, 48-49&nbsp; [4 islands]</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Mexico</td>
+  <td class="auto-style1"
+>XE</td>
+  <td class="auto-style1"
+>10</td>
+  <td class="auto-style1"><strong>DK</strong>
+78-79, 87-89, 97-99, 
+<strong>DL</strong>
+
+27-29, 34-39, 42-49, 52-59, 62-99,
+  
+<strong>DM</strong>
+
+10-12, 20-22, 30-32,
+  40-41, 50-51, 60-61, 70-71, 
+<strong>EK</strong>
+06-09, 15-19, 25-28, 34-38, 45-49, 57-59, 68-69, 
+<strong>EL</strong>
+
+00-07, 10-16, 40-41, 50-51, 60-61
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Burkina Faso</td>
+  <td class="auto-style1"
+>XT</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>IJ</strong>
+79, 89, 
+<strong>IK</strong>
+
+70-73, 80-84, 90-95,<strong> 
+JK</strong>
+
+01-04, 11-12
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Cambodia</td>
+  <td class="auto-style1"
+>XU</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>OK</strong>
+10-14, 20-24, 30-34
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Laos</td>
+  <td class="auto-style1"
+>XW</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>OK</strong>
+07-09, 18-19, 24-28,
+  34-37, 
+<strong>OL</strong>
+
+00-01, 10-11,
+  20
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Macao</td>
+  <td class="auto-style1"
+>XX9</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>OL</strong>
+61-62, 71-72,
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Myanmar</td>
+  <td class="auto-style1"
+>XY-XZ</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>NK</strong>
+69, 75-79, 84-97, 99, 
+<strong>NL</strong>
+
+60-63, 70-76, 80-88, 90-97, 
+<strong>OL</strong>00-01</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" style="height: 23px" >GDR&nbsp;
+		b4 2 Oct 90</td>
+  <td class="auto-style1" style="height: 23px"
+>Y2-Y9&nbsp;
+  <br>
+		</td>
+  <td class="auto-style1" style="height: 23px"
+>3</td>
+  <td class="auto-style1" style="height: 23px"><strong>ML</strong>
+09, 19, 29, 
+<strong>MM</strong>
+
+00-06, 10-15, 20-27, 30-37, 40-47,
+  54-58, 66-67, 76-77
+</td>
+  <td class="auto-style1" style="height: 23px"
+>EU</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Afghanistan</td>
+  <td class="auto-style1"
+>YA</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>ML</strong>
+09, 19, 29,<strong> 
+MM</strong>
+
+00-06, 10-15, 20-27, 30-37, 40-47,
+  54-58, 66-67, 76-77
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Indonesia</td>
+  <td class="auto-style1"
+>YB-YH</td>
+  <td class="auto-style1"
+>10</td>
+  <td class="auto-style1"><strong>NI</strong>
+89, 97-99, 
+<strong>NJ</strong>
+
+72, 74-75, 80-85, 90-94, 
+<strong>OI</strong>
+
+06-09, 14-19, 23-29, 32-34, 36-38,
+  42-44, 46-49, 51-54, 56-59, 61-64, 66-69, 71-99, 
+<strong>OJ</strong>
+00-02, 10-11, 20, 30, 40-41, 50-51, 60-61, 70-74, 80-84, 90-92,
+  
+<strong>PH </strong>09, 19, 29, 
+<strong>PI</strong>
+
+00-24, 28, 30-34, 36-39, 41-43,
+  45-49, 51-59, 64-69, 72-79, 81-82, 84-89, 91-98, 
+<strong>QI</strong>
+00-07
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Iraq</td>
+  <td class="auto-style1"
+>YI</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>KM</strong>
+92-93, 
+<strong>LL </strong>19, 29,<strong> 
+LM</strong>
+01-06, 10-17, 20-27, 30-33, 40
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Vanuatu</td>
+  <td class="auto-style1"
+>YJ</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>RH</strong>
+33-36, 40-45
+</td>
+  <td class="auto-style1"
+>OC</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Syria</td>
+  <td class="auto-style1"
+>YK</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>KM</strong>
+75, 82-86, 93-96,<strong> 
+LM</strong>
+
+04-07, 16-17
+</td>
+  <td class="auto-style1"
+>AS</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Latvia</td>
+  <td class="auto-style1"
+>YL</td>
+  <td class="auto-style1"
+>5</td>
+  <td class="auto-style1"><strong>KO</strong>
+06-07, 16-17, 26-27,
+  35-37
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Nicaragua</td>
+  <td class="auto-style1"
+>YN</td>
+  <td class="auto-style1"
+>3</td>
+  <td class="auto-style1"><strong>EK</strong>
+61-63, 71-74, 80-84
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Romania</td>
+  <td class="auto-style1"
+>YO-YR</td>
+  <td class="auto-style1"
+>8</td>
+  <td class="auto-style1"><strong>KN</strong>
+04-07, 13-18, 23-27,
+  33-38, 43-46
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >El Salvador</td>
+  <td class="auto-style1"
+>YS</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>EK</strong>
+43, 53-54, 63
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Serbia</td>
+  <td class="auto-style1"
+>YT-YU,YZ</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>JN</strong>
+93-96, 
+<strong>KN</strong>
+
+01-06, 12-14
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Yugoslavia&nbsp; b4 28Jun '06</td>
+  <td class="auto-style1"
+>YT-YU,YZ <br> </td>
+  <td class="auto-style1"
+>6</td>
+  <td class="auto-style1"><strong>JN</strong>
+92-96, 
+<strong>KN</strong>
+
+01-05, 11-14
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Aves Is.</td>
+  <td class="auto-style1"
+>YV0</td>
+  <td class="auto-style1"
+>1</td>
+  <td class="auto-style1"><strong>FK</strong>
+85
+</td>
+  <td class="auto-style1"
+>NA</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Venezuela</td>
+  <td class="auto-style1"
+>YV-YY</td>
+  <td class="auto-style1"
+>10</td>
+  <td class="auto-style1"><strong>FJ</strong>
+37-39, 47-49, 56-79, 82,
+  84-89, 94-99, 
+<strong>FK</strong>
+
+30-31,
+  40-41, 50-51, 60, 70, 80
+</td>
+  <td class="auto-style1"
+>SA</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Zimbabwe</td>
+  <td class="auto-style1"
+>Z2</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>KG</strong>
+39, 47-49, 57-59, 68-69, 
+<strong>KH </strong>21-22, 30-32, 40-44, 50-54, 60-63
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Macedonia</td>
+  <td class="auto-style1"
+>Z3</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>KN</strong>
+00-02, 11-12
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Kosovo, Rep. of&nbsp;&nbsp;&nbsp;&nbsp; <br>after 
+  9Oct2017</td>
+  <td class="auto-style1">Z6</td>
+  <td class="auto-style1">1&nbsp;</td>
+  <td class="auto-style1"><strong>KN </strong>01-03</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >South Sudan Rep. of</td>
+  <td class="auto-style1"
+>Z8</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>KJ</strong>
+27-29, 34-39, 44-49,
+  53-59, 63-69, 74-79, 
+<strong>KK</strong>
+
+20,
+  30, 40, 50, 60-61
+</td>
+  <td class="auto-style1"
+>AF</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Albania</td>
+  <td class="auto-style1"
+>ZA</td>
+  <td class="auto-style1"
+>2</td>
+  <td class="auto-style1"><strong>JM</strong>
+99, 
+<strong>JN</strong>
+
+90-92, 
+<strong>KM</strong>
+09,
+<strong>KN</strong>
+
+00-02
+</td>
+  <td class="auto-style1"
+>EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Gibraltar</td>
+  <td class="auto-style1">ZB2</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>IM</strong>76</td>
+  <td class="auto-style1">EU</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >UK Sov. Base, Cyprus</td>
+  <td class="auto-style1">ZC4</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>KM</strong>64</td>
+  <td class="auto-style1">AS</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >St. Helena</td>
+  <td class="auto-style1">ZD7</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>IH</strong>73-74</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Ascension Island</td>
+  <td class="auto-style1">ZD8</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>II</strong>22</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Tristan Da Cunha</td>
+  <td class="auto-style1">ZD9</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>IE</strong>59, <strong>IF</strong>32</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+ <tr>
+  <td class="auto-style1" >Cayman Islands</td>
+  <td class="auto-style1">ZF</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>EK</strong>99, <strong>FK</strong>09</td>
+  <td class="auto-style1">NA</td>
+ </tr>
+  <tr>
+  <td class="auto-style1">Niue</td>
+  <td class="auto-style1">ZK2 / E6</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>AH</strong>50, 51</td>
+   <td class="auto-style1">OC</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Tokelau Is.</td>
+  <td class="auto-style1">ZK3</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>AI</strong>31, 40</td>
+   <td class="auto-style1">OC</td>
+ </tr>
+
+ <tr>
+  <td class="auto-style1" >New Zealand</td>
+  <td class="auto-style1">ZL-ZM&nbsp; </td>
+  <td class="auto-style1">3 regs.</td>
+  <td class="auto-style1">Hold any 3 Regions from the ZL Territories or Protectorates as per the table below to claim your ZL DX BAR.&nbsp; <br><em>(see also the dedicated ZL award offered in the Rules under &quot;The Pinnacle Series&quot;)</em></td>
+  <td class="auto-style1">AS</td>
+ </tr>
+ 	<tr>
+  <td class="auto-style1">Overseas Visitors</td>
+  <td class="auto-style1">ZL0</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1">ZL0 issued for visitors use. Any ZL0 confirmed, counts.</td>
+   <td class="auto-style1">OC</td>   
+ </tr>
+	<tr>
+  <td class="auto-style1">ZL Antarctic</td>
+  <td class="auto-style1">ZL5</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>AA</strong>00-05, 10-15, 20-25, 30-35, 40-45, 50-55, 60-65, 70-75,<br>
+	80-84, 90-94. <strong>AB</strong>80-81, 90-91, <strong>BA</strong>00-04, 10-14, 18, 20-24<br>
+	27-28, 30-38, 40-48. <strong>BB</strong>00, 02, 11-12, 20-22, 30-32, 40-42.<br>
+	<strong>RA</strong>00-18, 20-27, 30-37, 40-46, 50-56, 60-66, 70-76, 80-85,<br>
+	90-95. <strong>RB</strong>00-09, 11-19, 21-22, 25-29, 31-33, 35-39, 42-43,
+	<br>46-48, 57-58.<strong> RC</strong>00</td>
+   <td class="auto-style1">OC</td>
+ </tr>
+	<tr>
+  <td class="auto-style1">NZART (Asso. of	Radio Trans.)</td>
+  <td class="auto-style1">ZL6</td>
+  <td class="auto-style1" >1</td>
+  <td class="auto-style1">ZL6 issued for NZART use. Any ZL6 confirmed, counts.</td>
+   <td class="auto-style1" >OC</td>
+ 	</tr>
+	<tr>
+  <td class="auto-style1">Chatham Is.</td>
+  <td class="auto-style1">ZL7</td>
+  <td class="auto-style1">2</td>
+  <td class="auto-style1"><strong>AE</strong>15-16, 25-26</td>
+   <td class="auto-style1">OC</td>
+ 	</tr>
+	<tr>
+  <td class="auto-style1">Kermadec Is.</td>
+  <td class="auto-style1">ZL8</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>AF</strong>08-09,<strong>AG</strong>10</td>
+   <td class="auto-style1">OC</td>
+ </tr>
+	<tr>
+  <td class="auto-style1">Auckland &amp; Campbell Is.</td>
+  <td class="auto-style1">ZL9</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>RD</strong>29, 39, 47</td>
+   <td class="auto-style1">OC</td>
+   </tr>
+	<tr>
+  <td class="auto-style1">Paraguay</td>
+  <td class="auto-style1">ZP</td>
+  <td class="auto-style1">3</td>
+  <td class="auto-style1"><strong>FG</strong>87-89, 95-99, <strong>FH</strong>90, <strong>GG</strong>02, 05-09, 12-17, 22-27</td>
+  <td class="auto-style1">SA</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >R. South Africa</td>
+  <td class="auto-style1">ZR-ZU</td>
+  <td class="auto-style1">7</td>
+  <td class="auto-style1"><strong>JF</strong>86-89, 95-99,<strong>JG</strong>80-81, 90-91,<strong>KF</strong>05-09, 15-19, 25-29, 36-39, 47-49, 58-59,<strong>KG</strong>00-04, 10-14,20-24, 30-36, 40-47, 50-57, 61-64</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+	<tr>
+  <td class="auto-style1" >Prince Edward &amp; Marion Is</td>
+  <td class="auto-style1">ZS8</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1"><strong>KE</strong>83</td>
+  <td class="auto-style1">AF</td>
+ </tr>
+	<tr>
+  <td class="auto-style1">m/m</td>
+  <td class="auto-style1">Marine Mobile</td>
+  <td class="auto-style1">1</td>
+  <td class="auto-style1">&nbsp;See Grid rules for information on this really great award.</td>
+  <td class="auto-style1">n/a</td>
+ 	</tr>
+ </table>
+ </center>
+<br>
+ 
